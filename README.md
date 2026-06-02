@@ -48,7 +48,7 @@ git clone https://github.com/pedrin3a/GS-WEB-DEV
 2. Entre na pasta do projeto:
 
 ```bash
-cd OrbitEye
+cd GS-WEB-DEV
 ```
 
 3. Abra o arquivo `index.html` em qualquer navegador.
