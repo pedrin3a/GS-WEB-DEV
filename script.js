@@ -50,15 +50,50 @@ formulario.addEventListener("submit", function(event) {
 
     event.preventDefault();
 
-    const nome = document.getElementById("nome").value.trim();
+    const nome = document.getElementById("nome");
+    const email = document.getElementById("email");
+    const cidade = document.getElementById("cidade");
 
-    const email = document.getElementById("email").value.trim();
+    const mensagem =
+        document.getElementById("mensagemFormulario");
 
-    const cidade = document.getElementById("cidade").value.trim();
+    nome.classList.remove("campo-erro", "campo-sucesso");
+    email.classList.remove("campo-erro", "campo-sucesso");
+    cidade.classList.remove("campo-erro", "campo-sucesso");
 
-    const mensagem = document.getElementById("mensagemFormulario");
+    let valido = true;
 
-    if (!nome || !email || !cidade) {
+    if (nome.value.trim() === "") {
+
+        nome.classList.add("campo-erro");
+        valido = false;
+
+    } else {
+
+        nome.classList.add("campo-sucesso");
+    }
+
+    if (email.value.trim() === "") {
+
+        email.classList.add("campo-erro");
+        valido = false;
+
+    } else {
+
+        email.classList.add("campo-sucesso");
+    }
+
+    if (cidade.value.trim() === "") {
+
+        cidade.classList.add("campo-erro");
+        valido = false;
+
+    } else {
+
+        cidade.classList.add("campo-sucesso");
+    }
+
+    if (!valido) {
 
         mensagem.textContent =
             "Preencha todos os campos.";
@@ -76,5 +111,9 @@ formulario.addEventListener("submit", function(event) {
         "mensagem sucesso";
 
     formulario.reset();
+
+    nome.classList.remove("campo-sucesso");
+    email.classList.remove("campo-sucesso");
+    cidade.classList.remove("campo-sucesso");
 
 });
