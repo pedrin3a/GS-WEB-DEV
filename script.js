@@ -183,6 +183,7 @@ const perguntas = [
 ];
 
 let perguntaAtual = 0;
+let pontuacao = 0;
 
 const btnQuiz = document.getElementById("btnQuiz");
 
@@ -191,6 +192,10 @@ btnQuiz.addEventListener("click", iniciarQuiz);
 function iniciarQuiz() {
 
     perguntaAtual = 0;
+
+    pontuacao = 0;
+
+    document.getElementById("quizResultado").textContent = "";
 
     mostrarPergunta();
 
@@ -231,12 +236,36 @@ function mostrarPergunta() {
 
 function responder(indiceSelecionado) {
 
+    const pergunta = perguntas[perguntaAtual];
+
+    if (indiceSelecionado === pergunta.correta) {
+
+        pontuacao++;
+
+    }
+
     perguntaAtual++;
 
     if (perguntaAtual < perguntas.length) {
 
         mostrarPergunta();
 
+    } else {
+
+        finalizarQuiz();
+
     }
+
+}
+
+function finalizarQuiz() {
+
+    document.getElementById("quizPergunta").textContent =
+        "Quiz finalizado!";
+
+    document.getElementById("quizOpcoes").innerHTML = "";
+
+    document.getElementById("quizResultado").textContent =
+        `Você acertou ${pontuacao} de ${perguntas.length} perguntas.`;
 
 }
