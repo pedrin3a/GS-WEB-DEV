@@ -21,3 +21,21 @@ function trocarSlide() {
 }
 
 setInterval(trocarSlide, 4000);
+
+function trocarTema(tema) {
+
+    document.body.classList.remove(
+        "tema-verde",
+        "tema-escuro"
+    );
+
+    if (tema === "verde") {
+
+        document.body.classList.add("tema-verde");
+    }
+
+    if (tema === "escuro") {
+
+        document.body.classList.add("tema-escuro");
+    }
+}
