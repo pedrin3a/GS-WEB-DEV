@@ -1,4 +1,7 @@
 console.log("OrbitEye carregado!");
+// ========================================
+// SLIDESHOW
+// ========================================
 const slides = document.querySelectorAll(".slide");
 const indicadores = document.querySelectorAll(".indicador");
 let slideAtual = 0;
@@ -22,6 +25,10 @@ function trocarSlide() {
 
 setInterval(trocarSlide, 4000);
 
+// ========================================
+// TROCA DE TEMAS
+// ========================================
+
 function trocarTema(tema) {
 
     document.body.classList.remove(
@@ -43,6 +50,10 @@ if (temaSalvo) {
 
     trocarTema(temaSalvo);
 }
+// ========================================
+// FORMULÁRIO
+// ========================================
+
 
 const formulario = document.getElementById("formContato");
 
@@ -117,6 +128,11 @@ formulario.addEventListener("submit", function(event) {
     cidade.classList.remove("campo-sucesso");
 
 });
+
+// ========================================
+// QUIZ ORBITEYE
+// ========================================
+
 
 const perguntas = [
 
@@ -198,7 +214,7 @@ function iniciarQuiz() {
     document.getElementById("quizResultado").textContent = "";
 
     btnQuiz.textContent = "Quiz em andamento";
-    
+
     mostrarPergunta();
 
 }

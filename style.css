@@ -718,6 +718,33 @@ body.tema-escuro .btn {
 
 }
 
+/* ANIMAÇÕES FINAIS */
+
+.section {
+
+    scroll-margin-top: 100px;
+
+}
+
+.image img {
+
+    box-shadow: 0 0 20px rgba(0, 245, 255, 0.2);
+
+}
+
+.logo {
+
+    text-shadow: 0 0 10px var(--neon-blue);
+
+}
+
+footer {
+
+    border-top: 2px solid var(--neon-blue);
+
+}
+
+
 /* RESPONSIVIDADE */
 
 
