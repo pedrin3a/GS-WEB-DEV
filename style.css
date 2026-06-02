@@ -608,6 +608,96 @@ body.tema-escuro .btn {
 
 }
 
+/* QUIZ */
+
+.quiz-container {
+
+    flex: 1;
+
+    background: var(--panel-color);
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    border: 2px solid var(--neon-blue);
+
+}
+
+#quizPergunta {
+
+    font-size: 20px;
+
+    margin-bottom: 20px;
+
+    font-weight: bold;
+
+}
+
+#quizOpcoes {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+
+}
+
+#quizOpcoes button {
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    background: var(--bg-color);
+
+    color: white;
+
+    transition: 0.3s;
+
+}
+
+#quizOpcoes button:hover {
+
+    transform: scale(1.02);
+
+}
+
+#btnQuiz {
+
+    padding: 15px 25px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    background: var(--neon-blue);
+
+    color: black;
+
+    font-weight: bold;
+
+}
+
+#quizResultado {
+
+    margin-top: 20px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+}
+
 
 /* RESPONSIVIDADE */
 

@@ -117,3 +117,15 @@ formulario.addEventListener("submit", function(event) {
     cidade.classList.remove("campo-sucesso");
 
 });
+
+const btnQuiz =
+    document.getElementById("btnQuiz");
+
+btnQuiz.addEventListener("click", () => {
+
+    document.getElementById(
+        "quizPergunta"
+    ).textContent =
+        "Quiz carregado com sucesso.";
+
+});
