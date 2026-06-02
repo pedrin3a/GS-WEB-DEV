@@ -181,7 +181,8 @@ header {
     opacity: 0;
 
     transition: opacity 1s ease;
-
+    
+    animation: zoomSlide 4s linear;
 }
 
 .slide.ativo {
@@ -246,6 +247,63 @@ header {
 
 }
 
+/* INDICADORES */
+
+.indicadores {
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    gap: 12px;
+
+    z-index: 5;
+
+}
+
+.indicador {
+
+    width: 14px;
+
+    height: 14px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.4);
+
+    transition: 0.3s;
+
+}
+
+.ativo-indicador {
+
+    background: var(--neon-blue);
+
+    box-shadow: 0 0 10px var(--neon-blue);
+
+}
+
+@keyframes zoomSlide {
+
+    from {
+
+        transform: scale(1);
+
+    }
+
+    to {
+
+        transform: scale(1.08);
+
+    }
+
+}
 
 /* SECTIONS */
 
