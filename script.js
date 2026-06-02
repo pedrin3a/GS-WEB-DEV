@@ -118,14 +118,79 @@ formulario.addEventListener("submit", function(event) {
 
 });
 
-const btnQuiz =
-    document.getElementById("btnQuiz");
+const perguntas = [
 
-btnQuiz.addEventListener("click", () => {
+    {
+        pergunta: "O OrbitEye ajuda a monitorar:",
+        opcoes: ["Filmes", "Clima", "Jogos", "Música"],
+        correta: 1
+    },
 
-    document.getElementById(
-        "quizPergunta"
-    ).textContent =
-        "Quiz carregado com sucesso.";
+    {
+        pergunta: "Qual tecnologia é usada pelo OrbitEye?",
+        opcoes: ["Satélites", "Bicicletas", "Navios", "Aviões"],
+        correta: 0
+    },
 
-});
+    {
+        pergunta: "O sistema pode ajudar a prevenir:",
+        opcoes: ["Enchentes", "Provas", "Livros", "Trânsito"],
+        correta: 0
+    },
+
+    {
+        pergunta: "Os satélites observam:",
+        opcoes: ["Apenas cidades", "Apenas oceanos", "O planeta Terra", "Apenas florestas"],
+        correta: 2
+    },
+
+    {
+        pergunta: "O OrbitEye fornece:",
+        opcoes: ["Alertas climáticos", "Receitas", "Filmes", "Jogos"],
+        correta: 0
+    },
+
+    {
+        pergunta: "Queimadas podem ser detectadas pelo sistema?",
+        opcoes: ["Sim", "Não"],
+        correta: 0
+    },
+
+    {
+        pergunta: "O monitoramento acontece:",
+        opcoes: ["Em tempo real", "Uma vez por ano", "Uma vez por mês", "Nunca"],
+        correta: 0
+    },
+
+    {
+        pergunta: "Quem pode usar os dados?",
+        opcoes: ["Defesa Civil", "Apenas astronautas", "Apenas pilotos", "Apenas professores"],
+        correta: 0
+    },
+
+    {
+        pergunta: "O OrbitEye está relacionado à:",
+        opcoes: ["Indústria Espacial", "Indústria Musical", "Indústria Automotiva", "Indústria Têxtil"],
+        correta: 0
+    },
+
+    {
+        pergunta: "O principal objetivo é:",
+        opcoes: ["Reduzir riscos climáticos", "Vender computadores", "Criar jogos", "Fazer vídeos"],
+        correta: 0
+    }
+
+];
+
+let perguntaAtual = 0;
+
+const btnQuiz = document.getElementById("btnQuiz");
+
+btnQuiz.addEventListener("click", iniciarQuiz);
+
+function iniciarQuiz() {
+
+    document.getElementById("quizPergunta").textContent =
+        perguntas[0].pergunta;
+
+}
