@@ -43,3 +43,38 @@ if (temaSalvo) {
 
     trocarTema(temaSalvo);
 }
+
+const formulario = document.getElementById("formContato");
+
+formulario.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const nome = document.getElementById("nome").value.trim();
+
+    const email = document.getElementById("email").value.trim();
+
+    const cidade = document.getElementById("cidade").value.trim();
+
+    const mensagem = document.getElementById("mensagemFormulario");
+
+    if (!nome || !email || !cidade) {
+
+        mensagem.textContent =
+            "Preencha todos os campos.";
+
+        mensagem.className =
+            "mensagem erro";
+
+        return;
+    }
+
+    mensagem.textContent =
+        "Formulário enviado com sucesso!";
+
+    mensagem.className =
+        "mensagem sucesso";
+
+    formulario.reset();
+
+});

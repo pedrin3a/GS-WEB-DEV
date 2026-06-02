@@ -558,6 +558,28 @@ body.tema-escuro .btn {
 
 }
 
+.mensagem {
+
+    margin-top: 15px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+}
+
+.erro {
+
+    color: #ff4d4d;
+
+}
+
+.sucesso {
+
+    color: #4dff88;
+
+}
+
 
 /* RESPONSIVIDADE */
 
