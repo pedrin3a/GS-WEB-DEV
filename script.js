@@ -29,13 +29,17 @@ function trocarTema(tema) {
         "tema-escuro"
     );
 
-    if (tema === "verde") {
+    if (tema !== "azul") {
 
-        document.body.classList.add("tema-verde");
+        document.body.classList.add(`tema-${tema}`);
     }
 
-    if (tema === "escuro") {
+    localStorage.setItem("temaOrbitEye", tema);
+}
 
-        document.body.classList.add("tema-escuro");
-    }
+const temaSalvo = localStorage.getItem("temaOrbitEye");
+
+if (temaSalvo) {
+
+    trocarTema(temaSalvo);
 }
