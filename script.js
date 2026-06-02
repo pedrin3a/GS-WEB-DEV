@@ -190,7 +190,53 @@ btnQuiz.addEventListener("click", iniciarQuiz);
 
 function iniciarQuiz() {
 
-    document.getElementById("quizPergunta").textContent =
-        perguntas[0].pergunta;
+    perguntaAtual = 0;
+
+    mostrarPergunta();
+
+}
+
+function mostrarPergunta() {
+
+    const pergunta = perguntas[perguntaAtual];
+
+    const perguntaElemento =
+        document.getElementById("quizPergunta");
+
+    const opcoesElemento =
+        document.getElementById("quizOpcoes");
+
+    perguntaElemento.textContent =
+        pergunta.pergunta;
+
+    opcoesElemento.innerHTML = "";
+
+    pergunta.opcoes.forEach((opcao, indice) => {
+
+        const botao =
+            document.createElement("button");
+
+        botao.textContent = opcao;
+
+        botao.addEventListener(
+            "click",
+            () => responder(indice)
+        );
+
+        opcoesElemento.appendChild(botao);
+
+    });
+
+}
+
+function responder(indiceSelecionado) {
+
+    perguntaAtual++;
+
+    if (perguntaAtual < perguntas.length) {
+
+        mostrarPergunta();
+
+    }
 
 }
