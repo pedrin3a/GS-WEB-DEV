@@ -497,6 +497,68 @@ body.tema-escuro .btn {
     background: #ffffff;
 
 }
+
+/* FORMULÁRIO */
+
+.formulario {
+
+    flex: 1;
+
+}
+
+#formContato {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+}
+
+#formContato input {
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    border: 2px solid var(--neon-blue);
+
+    background: var(--panel-color);
+
+    color: white;
+
+    font-size: 16px;
+
+}
+
+#formContato button {
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: var(--neon-blue);
+
+    color: black;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+#formContato button:hover {
+
+    transform: scale(1.03);
+
+}
+
+
 /* RESPONSIVIDADE */
 
 
