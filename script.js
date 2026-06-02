@@ -197,6 +197,8 @@ function iniciarQuiz() {
 
     document.getElementById("quizResultado").textContent = "";
 
+    btnQuiz.textContent = "Quiz em andamento";
+    
     mostrarPergunta();
 
 }
@@ -260,12 +262,60 @@ function responder(indiceSelecionado) {
 
 function finalizarQuiz() {
 
-    document.getElementById("quizPergunta").textContent =
+    const perguntaElemento =
+        document.getElementById("quizPergunta");
+
+    const opcoesElemento =
+        document.getElementById("quizOpcoes");
+
+    const resultadoElemento =
+        document.getElementById("quizResultado");
+
+    perguntaElemento.textContent =
         "Quiz finalizado!";
 
-    document.getElementById("quizOpcoes").innerHTML = "";
+    opcoesElemento.innerHTML = "";
 
-    document.getElementById("quizResultado").textContent =
-        `Você acertou ${pontuacao} de ${perguntas.length} perguntas.`;
+    let mensagem = "";
+    let classeResultado = "";
+
+    if (pontuacao <= 4) {
+
+        mensagem =
+            "Você precisa aprender mais sobre monitoramento climático e tecnologia espacial.";
+
+        classeResultado =
+            "resultado-ruim";
+
+    }
+
+    else if (pontuacao <= 7) {
+
+        mensagem =
+            "Bom conhecimento! Você já entende boa parte do projeto OrbitEye.";
+
+        classeResultado =
+            "resultado-medio";
+
+    }
+
+    else {
+
+        mensagem =
+            "Excelente! Você domina os conceitos principais do OrbitEye.";
+
+        classeResultado =
+            "resultado-bom";
+
+    }
+
+    resultadoElemento.className =
+        classeResultado;
+
+    resultadoElemento.innerHTML =
+        `Você acertou ${pontuacao} de ${perguntas.length} perguntas.<br><br>${mensagem}`;
+
+    btnQuiz.textContent =
+        "Refazer Quiz";
 
 }

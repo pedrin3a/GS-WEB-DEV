@@ -698,6 +698,25 @@ body.tema-escuro .btn {
 
 }
 
+/* RESULTADO DO QUIZ */
+
+.resultado-ruim {
+
+    color: #ff4d4d;
+
+}
+
+.resultado-medio {
+
+    color: #ffd24d;
+
+}
+
+.resultado-bom {
+
+    color: #4dff88;
+
+}
 
 /* RESPONSIVIDADE */
 
